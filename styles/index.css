@@ -1,0 +1,164 @@
+/* 모바일 기준 w440 */
+html {scroll-behavior: smooth;}/* 스크롤 애니메이션 효과 */
+/* Firefox */
+html {scrollbar-width: thin;scrollbar-color: #222 #555;}
+/* Opera */
+html::-o-scrollbar {width: 5px;}
+html::-o-scrollbar-thumb {background-color: #222;}
+/* Chrome, Safari, Edge 등 웹킷 기반 브라우저 */
+html:-webkit-scrollbar {width: 5px;}
+html::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);}
+html::-webkit-scrollbar-thumb {background-color: #222;}
+body {background-color:#222;}
+#wrap {
+    /* width:440px;  */ /* 디자인 기준 크기 (iphone 17pro) */
+    min-width:320px;  /* 최소 제한 너비 (고정) */
+    box-shadow:0 10px 10px rgba(0,0,0,0.3);
+    background-color:#fff;
+    margin:0 auto;
+    /* height:100vh; */
+    /* overflow-x:hidden; */
+}
+#wrap .info, 
+#wrap .project_wrap .project {
+    max-width:1440px;
+    margin:0 auto;
+}
+/* =========================================1. intro */
+#wrap .intro {
+    height:100vh;
+    background:linear-gradient(#fff, #FF4949 40%);
+    display:flex; flex-flow:row nowrap;
+    justify-content: center; align-items: center;
+}
+#wrap .intro h1 {}
+#wrap .intro h1 span {display:block; text-align: center; line-height:1.5;}
+#wrap .intro h1 span:nth-child(1) {font-size:1.18rem; font-weight:300;}
+#wrap .intro h1 span:nth-child(2) {font-size:1.25rem; font-weight:600;}
+#wrap .intro h1 .name {font-size:1.5rem; margin-top:50px; font-weight:700;}
+#wrap > .info {
+    height:100vh; display:flex;
+    flex-flow:column nowrap; 
+    justify-content: center; align-items: center;
+}
+#wrap .info .profile {}
+#wrap .info .profile .photo { 
+    width:195px; height:212px; border-radius:20px;
+    background-color:#ddd;
+    margin:0 auto;
+}
+#wrap .info .profile .photo img {width:100%;}
+#wrap .info .profile .me {
+    padding:20px 0;
+    display:flex; flex-flow:row wrap; 
+    justify-content: space-around;
+}
+#wrap .info .profile .me li {
+    width:100%; text-align: center; margin:0 0 12px;
+}
+#wrap .info .me li:nth-child(1) {text-align:right;}
+#wrap .info .me li:nth-child(2) {text-align:left;}
+#wrap .info .me li:nth-child(1),
+#wrap .info .me li:nth-child(2) {width:40%;}
+#wrap .info .me li:last-child {margin:0;}
+#wrap .info .profile .me li a {}
+#wrap .info .profile h2 {
+    margin:0 0 24px; 
+    font-size:1.25rem; font-weight: 600;}
+#wrap .info .profile .skill_list {
+    padding:0 15px;
+    display: flex; flex-flow:row wrap;
+    justify-content: center;/*  gap:12px; */
+}
+#wrap .info .profile .skill_list p {
+    width:calc(100% / 6); margin:0 3px 12px;
+}
+#wrap .info .profile .skill_list p img {width:100%;}
+#wrap .info .details {display:none;}
+#wrap .info .details dl {margin-bottom:20px;}
+#wrap .info .details dl dt {font-size:1.25rem; font-weight:700; margin-bottom:16px;}
+#wrap .info .details dl dd {line-height:1.7;}
+/* ============================================================인적사항 */
+#wrap .project_wrap {}
+#wrap .project_wrap h1 {
+    text-align:center; margin:0 0 30px;
+}
+/* ===================================공통 프로젝트 선택자 */
+#wrap .project_wrap h1 {font-size:1.5rem; font-weight:600;}
+#wrap .project_wrap .project {width:calc(100% - 15px); margin:0 auto 50px; overflow:hidden;}
+#wrap .project_wrap .project h2 {margin:0 0 10px; font-size:1.25rem;}
+#wrap .project_wrap .project h2 span {font-weight:600;}
+#wrap .project_wrap .project .mockup {height:372px; overflow:hidden;}
+#wrap .project_wrap .project .mockup img {height:100%;}
+#wrap .project_wrap .project .info {margin:15px 0 30px;}
+#wrap .project_wrap .project .plan {line-height:1.5;}
+#wrap .project_wrap .project .link {margin:50px 0; display:flex; justify-content: center; gap:10px;}
+#wrap .project_wrap .project .link a {padding:10px 30px; border-radius: 8px; transition:filter 0.5s;}
+#wrap .project_wrap .project .link a:hover {filter:brightness(120%) sepia(50%);}
+#wrap .project_wrap .project .link .proposal {background-color:#FF68BE;}
+#wrap .project_wrap .project .link .prototype {background-color: #222; color:#fff;}
+#wrap .project_wrap .project1 {
+    display:flex;
+    flex-flow:column nowrap;
+}
+#wrap .project_wrap .project .title_thum {}
+#wrap .project_wrap .project .title_thum h2 {font-weight:500;}
+#wrap .project_wrap .project .title_thum .mockup {width:410px; height:372px; overflow:hidden;}
+#wrap .project_wrap .project .title_thum .mockup img {width:100%;/* 포토샵에서 이미지크기설정후 height:100%; 으로 바꿔야함 */}
+#wrap .project_wrap .project .details {}
+#wrap .project_wrap .project .details .info {}
+#wrap .project_wrap .project .details .info li {line-height:1.8; position:relative; padding-left:15px;}
+#wrap .project_wrap .project .details .info li::before {
+    content:''; display:block;
+    position:absolute; left:0; top:50%; transform:translateY(-50%); 
+    background:#222; border-radius:50%; width:4px; height:4px;
+}
+#wrap .project_wrap .project1 .details .info li:nth-child(3):before {top:20%;}
+#wrap .project_wrap .project1 .details .plan {line-height:1.5;}
+#wrap .project_wrap .project1 .details .link {margin:50px 0; display:flex; justify-content: center; gap:10px;}
+#wrap .project_wrap .project1 .details .link a {padding:10px 30px; border-radius: 8px; transition:filter 0.5s;}
+#wrap .project_wrap .project1 .details .link a:hover {filter:brightness(120%) sepia(50%);}
+#wrap .project_wrap .project1 .details .link .proposal {}
+#wrap .project_wrap .project1 .details .link .prototype {background-color: #222; color:#fff;}
+/* ====================================================그래픽 디자인 프로젝트 */
+#wrap .project_wrap h1+p {
+    text-align:center; font-size:0.88rem; margin-bottom:30px;
+}
+#wrap .project_wrap .graphic_wrap {
+    padding:0 15px; 
+    overflow:hidden; width:calc(100% - 30px); margin:0 auto;
+}
+#wrap .project_wrap .graphic_wrap .graphic_container {
+    display:flex; gap:20px; flex-flow:row nowrap;
+    width:max-content;
+}
+#wrap .project_wrap .graphic_wrap .graphic_container a {
+    width:123px;  height:200px;
+    /*width:100%; max-width:123px;
+    height:100%; max-height:200px; */
+    background-color:#eee;
+    overflow:hidden;
+    position:relative;
+}
+#wrap .project_wrap .graphic_wrap .graphic_container a img {
+    width:100%; position:relative; z-index:11;
+}
+#wrap .project_wrap .graphic_wrap .graphic_container a::after {
+    content:''; display:block; width:100%; height:100%;
+    background-color:#000; opacity:0.7;
+    position:absolute; left:0; top:0; z-index:10;
+}
+#wrap .project_wrap .graphic_wrap .graphic_container a:hover::after {}
+/* ==================================================(위) 그래픽 이미지 클릭 시 실행되는 팝업 */
+#wrap .project_wrap .graphic_popup_bg {
+    position:fixed; width:100%; height:100%; left:0; top:0; 
+    background:rgba(0,0,0,0.5);
+    /* display:flex; justify-content:center; align-items:center; */ /* 팝업 이미지를 가운데 정렬하는 방법 1 */
+    display:none;
+}
+#wrap .project_wrap .graphic_popup_bg .popup {
+    width:80%; height:60vh; background-color:#fff;
+    position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); /* 팝업 이미지를 가운데 정렬하는 방법 2 */
+    /* overflow-x:hidden; 스크롤 방법 1 */ overflow-y:auto;/* 스크롤 방법 2 */
+}
+#wrap .project_wrap .graphic_popup_bg .popup img {width:100%;}

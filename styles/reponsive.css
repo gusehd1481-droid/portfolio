@@ -1,0 +1,49 @@
+/* responsive.css */
+@media screen and (min-width:600px) {
+    /* 1행 글자크기, 여백 등 */
+    #wrap .intro h1 span:nth-child(1) {font-size:1.25rem;}
+    #wrap .intro h1 span:nth-child(2) {font-size:1.5rem;}
+    #wrap .intro h1 .name {font-size:2.0rem;}
+    /* 2행 */
+    #wrap .info .profile .skill_list p img {width:70%;}
+    /* 3행 프로젝트 이미지 w100% */
+    #wrap .project_wrap .project1 .title_thum .mockup {
+        height:auto; /* 100% 덮어쓰기값으로 auto로 변경 */
+        width:100%; max-width:600px;
+    }
+    /* 4행 그래픽 이미지 확대 */
+    #wrap .project_wrap .project1 .title_thum .mockup {width:100%;}
+}/* 사용자가 보는 기기 너비가 600보다 클 때 */
+@media screen and (min-width:840px) {
+    #wrap .project_wrap h1 {font-size:2.0rem;}
+    
+    #wrap .project_wrap .project > * {font-size:1.18rem;}
+    #wrap .project_wrap .project .title_thum h2 {font-size:1.5rem;}
+    #wrap .project_wrap .project {
+        flex-flow:row nowrap; gap:40px;
+        align-items:flex-end;
+    }
+    #wrap .project_wrap .project1 .details .link {margin:40px 0 0;}
+    /* 2행 info -> 1행 2열 레이아웃 구조 변경 */
+    #wrap > .info {
+        height:auto; padding:120px 0;
+        flex-flow:row nowrap; 
+        align-items:flex-start;
+    }
+    #wrap .info .details {
+        display:block;
+    }
+    #wrap .info .profile .photo { 
+        width:331px; height:374px; border-radius:20px;
+        background-color:#ddd;
+        margin:0 auto;
+    }
+    /* 3행 web -> 1행 2열 레이아웃 구조 변경 */
+    #wrap .project_wrap .project {
+        width:100%; margin:0 auto 50px; overflow:hidden;
+    }
+    #wrap .project_wrap .project1 .title_thum .mockup {
+        height:auto; /* 100% 덮어쓰기값으로 auto로 변경 */
+        width:700px;
+    }
+}
